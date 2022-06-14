@@ -1,41 +1,25 @@
-import java.util.Random;
+public class RndomString {
 
-public class HangmanApp {
-
-    /**
-     * @param args the command line arguments
-     */
-    
-    public String randomWord() {
-
-        String theWord = null;
-
-        //add more words if needed
-        String[] wordList = { "computer", "horse", "queue", "banana", "exponential", "person" };
- 
-        Random rand = new Random();
-
-        int randIndex = rand.nextInt (wordList.length);
-
-        theWord = wordList [randIndex];
-
-        return theWord;
-        
-    }
-        
-    public String myRandomWord;
-      
-      myRandomWord = randomWord();
-      
-    public static void main(String[] args) {
-        // TODO code application logic here
-      String myRandomWord;
-      
-      myRandomWord = randomWord();
-      
-      
-      
-    }
-    
-    
+	public static void main(String[] args) {
+	    
+	    String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	    String randomString = "";
+	    
+	    
+	    Random rand = new Random();
+	    int length = rand.nextInt(8);
+	    
+	    char[] text = new char[length];
+	    
+	    for(int i = 0; i < length; i++){
+	        text[i] = characters.charAt(rand.nextInt(characters.length()));
+	    }
+	    
+	    for(int i = 0; i < text.length; i++){
+	        randomString += text[i];
+	    }
+	    System.out.println(randomString);
+	    
+		
+	}
 }
