@@ -1,4 +1,6 @@
-public class RndomString {
+import java.util.Random;
+
+public class RandomString {
 
 	public static void main(String[] args) {
 	    
